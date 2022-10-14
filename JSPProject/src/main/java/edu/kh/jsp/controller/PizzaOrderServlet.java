@@ -22,6 +22,7 @@ public class PizzaOrderServlet extends HttpServlet{
 		// Integer.parseInt("문자열") : 숫자 형태 String -> int 변환
 		int amount = Integer.parseInt(req.getParameter("amount"));
 		
+		// ( 기본(10000) + 사이즈(0/2000) ) * 수량(1~10)
 		int temp = 0;
 		if(size.equals("L")) temp = 2000;
 		
