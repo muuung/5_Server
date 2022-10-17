@@ -29,6 +29,6 @@
         <td>${student.departmentName}</td>
         </tr>
     </c:forEach>
-    </table> 
+    </table>
 </body>
 </html>
