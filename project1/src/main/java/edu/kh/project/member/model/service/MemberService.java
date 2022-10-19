@@ -28,4 +28,17 @@ public class MemberService {
 		
 		return loginMember;
 	}
+
+	public int signUp(Member member) throws Exception{
+		Connection conn = getConnection();
+		
+		int result = dao.signUp(conn, member);
+		
+		if(result > 0) {commit(conn);}
+		else  		   {rollback(conn);}
+		
+		close(conn);
+		
+		return result;
+	}
 }

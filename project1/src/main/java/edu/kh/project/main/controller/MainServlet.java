@@ -28,7 +28,7 @@ public class MainServlet extends HttpServlet{
 			// key = "boardTypeMap"
 			// value = boardTypeMap이 참조하는 객체를 세팅
 			ServletContext application = req.getServletContext();
-			req.setAttribute("boardTypeMap", boardTypeMap);
+			application.setAttribute("boardTypeMap", boardTypeMap);
 			
 			RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/views/common/main.jsp");
 			
