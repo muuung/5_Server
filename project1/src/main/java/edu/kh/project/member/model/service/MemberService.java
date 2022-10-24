@@ -29,10 +29,33 @@ public class MemberService {
 		return loginMember;
 	}
 
+	/**
+	 * @param member
+	 * @return result
+	 * @throws Exception
+	 */
 	public int signUp(Member member) throws Exception{
 		Connection conn = getConnection();
 		
 		int result = dao.signUp(conn, member);
+		
+		if(result > 0) {commit(conn);}
+		else  		   {rollback(conn);}
+		
+		close(conn);
+		
+		return result;
+	}
+
+	/**
+	 * @param member
+	 * @return result
+	 * @throws Exception
+	 */
+	public int updateMember(Member member) throws Exception{
+		Connection conn = getConnection();
+		
+		int result = dao.updateMember(conn, member);
 		
 		if(result > 0) {commit(conn);}
 		else  		   {rollback(conn);}

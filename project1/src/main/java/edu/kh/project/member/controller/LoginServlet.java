@@ -149,7 +149,6 @@ public class LoginServlet extends HttpServlet{
 			 * - 주소창 변화 O
 			 * - 요청 주소 작성
 			 * - req, res가 유지되지 않음
-			 * 
 			 */
 			
 		} catch(Exception e) {

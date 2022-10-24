@@ -26,12 +26,12 @@ public class SignServlet extends HttpServlet{
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
 		// 데이터 문자 인코딩 변환
-		req.setCharacterEncoding("UTF-8");
+		// req.setCharacterEncoding("UTF-8");
 		
 		// 파라미터 얻어오기
 		String memberEmail = req.getParameter("memberEmail");
 		String memberPw = req.getParameter("memberPw");
-		String memberNickName = req.getParameter("memberNickName");
+		String memberNickname = req.getParameter("memberNickname");
 		String memberTel = req.getParameter("memberTel");
 		
 		// 주소는 선택적으로 입력하는 값
@@ -54,7 +54,7 @@ public class SignServlet extends HttpServlet{
 			Member member = new Member();
 			member.setMemberEmail(memberEmail);
 			member.setMemberPw(memberPw);
-			member.setMemberNickname(memberNickName);
+			member.setMemberNickname(memberNickname);
 			member.setMemberTel(memberTel);
 			member.setMemberAddress(memberAddress);
 			
