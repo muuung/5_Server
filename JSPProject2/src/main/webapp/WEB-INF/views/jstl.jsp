@@ -148,7 +148,7 @@
     
     <hr>
     
-    <h1>4. 조건문 - if ~ else i ~ else (c:choose, c:when, c:otherwise)</h1>
+    <h1>4. 조건문 - if ~ else if ~ else (c:choose, c:when, c:otherwise)</h1>
     
     <pre>
     	c:choose : when, otherwise를 감싸는 태그
@@ -207,7 +207,7 @@
 		   
 		   first : 첫 번째 반복이면 true, 아니면 false
 		   
-		   last  : 마지막 반복이면 true, 아니면 false			   
+		   last  : 마지막 반복이면 true, 아니면 false
 	</pre>
 	
 	<h3>일반 for문 형식으로 사용</h3>
